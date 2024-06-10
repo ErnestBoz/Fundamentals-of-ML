@@ -1,0 +1,34 @@
+question 17
+
+ y_pred = cross_val_predict(LinearRegression(), X, y, cv=k)
+    print(y_pred)
+
+scores = cross_val_predict(LinearRegression(), X, y, cv=skf)
+
+
+
+
+
+from sklearn.model_selection import cross_val_predict, StratifiedKFold 
+
+model1 = LinearRegression()
+
+skf = StratifiedKFold(n_splits=10,random_state=111,shuffle=True)
+
+scores = cross_val_score(LinearRegression(), X, y, cv=skf, scoring="r2")
+
+print("R2 score for all folds is", scores.mean())
+
+print("standard deviation", scores.std())
+
+
+
+
+
+
+print("R2 score and standard deviation for 5 folds are:")
+for k in range(2,7):
+    result = cross_val_score(LinearRegression(), X, y, cv=k, scoring='r2')
+    print(k, result.mean(), result.std())
+   
+    print(" ")
