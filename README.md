@@ -1,6 +1,5 @@
 # Fundamentals-of-ML
 
-I be doing stuff and shiii
 
 to access it: 
 
